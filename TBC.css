@@ -1,186 +1,179 @@
 /* Base styles  */
 body {
-    height: 10000px;
-    margin: 0;
-    font-family: sans-serif;
-    color: white;
-    box-sizing: border-box;
-  }
-  
-  /* TBC Concept box*/
-  .box {
-    position: relative;
-    width: 1100px; 
-    max-width: 100%; 
-    height: 376px; 
-    padding: 95px; 
-    margin: 0 auto; 
-    background-image: url('1.jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    border-radius: 5px; 
-    display: flex; 
-    align-items: center; 
-    justify-content: flex-start; 
-    box-sizing: border-box; 
-  }
-  
-  
-  .text-container {
-    width: 446px;
-    text-align: left;
-    background: rgba(0, 0, 0, 0.5); 
-    padding: 20px; 
-    border-radius: 5px; 
-  }
-  
-  
-  .header {
-    font-weight: 700;
-    font-size: 28px;
-    margin: 0 0 16px 0;
-  }
-  
-  
-  .paragraph {
-    font-weight: 400;
-    font-size: 16px;
-    margin: 0 0 24px 0;
-    line-height: 1.7;
-  }
-  
-  
-  .button {
-    font-weight: 700;
-    font-size: 12px;
-    color: white;
-    cursor: pointer;
-    width: 151.156px; 
-    padding: 16px 24px;
-    border: none;
-    border-radius: 4px;
-    background-color: #001682; 
-    text-align: center;
-    transition: background-color 0.25s;
-    margin: 0;
-  }
-  
-  .button:hover {
-    background-color: #3240e5; 
-  
-  /* Gamoiweret text*/
+  height: 10000px;
+  margin: 0;
+  font-family: sans-serif;
+  color: white;
+  box-sizing: border-box;
+}
+
+/* TBC Concept box */
+.box {
+  position: relative;
+  width: 1100px; 
+  max-width: 100%; 
+  height: 376px; 
+  padding: 95px; 
+  margin: 0 auto; 
+  background-image: url('1.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  border-radius: 5px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: flex-start; 
+  box-sizing: border-box; 
+}
+
+.text-container {
+  width: 446px;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.5); 
+  padding: 20px; 
+  border-radius: 5px; 
+}
+
+.header {
+  font-weight: 700;
+  font-size: 28px;
+  margin: 0 0 16px 0;
+}
+
+.paragraph {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0 0 24px 0;
+  line-height: 1.7;
+}
+
+.button {
+  font-weight: 700;
+  font-size: 12px;
+  color: white;
+  cursor: pointer;
+  width: 151.156px; 
+  padding: 16px 24px;
+  border: none;
+  border-radius: 4px;
+  background-color: #001682; 
+  text-align: center;
+  transition: background-color 0.25s;
+  margin: 0;
+}
+
+.button:hover {
+  background-color: #3240e5; 
+}
+
+/* Gamoiweret text */
 .gamoiweret {
-    width: auto;
-    color: black;
-    height: auto; 
-    font-size: 36px;
-    font-weight: 400;
-    line-height: 1.7;
-    margin: 45px auto; 
-    text-align: center;
-    padding: 20px; 
-    box-sizing: border-box; 
+  width: auto;
+  color: black;
+  height: auto; 
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.7;
+  margin: 45px auto; 
+  text-align: center;
+  padding: 20px; 
+  box-sizing: border-box; 
 }
 
 /* Statistics */
 .section_statistics {
-    background: none;
-    display: flex;
-    justify-content: center; 
-    width: 1100px; 
-    text-align: center;
-    color: black;
-    margin: 40px auto; */
-    padding: 40px 0; 
-    box-sizing: border-box; 
+  background: none;
+  display: flex;
+  justify-content: center; 
+  width: 1100px; 
+  text-align: center;
+  color: black;
+  margin: 40px auto; 
+  padding: 40px 0; 
+  box-sizing: border-box; 
 }
 
 .statistics_container {
-    width: 100%;
+  width: 100%;
 }
-  
-  .numbers {
-    display: flex;
-    width: 1100px;
-    justify-content: space-around;
-    flex-wrap: wrap; 
-    gap: 40px; 
-  }
-  
-  .numbers_item {
-    flex: 1 1 30%;
-    text-align: center;
-  }
-  
-  .numbers_number {
-    font-size: 44px;
-    font-weight: 700;
-    color: darkblue;
-    margin-bottom: 10px;
-  }
-  
-  .numbers_item p {
-    font-size: 16px;
-    font-weight: 500;
-    color: grey;
-    margin: 0;
-  }
+
+.numbers {
+  display: flex;
+  width: 1100px;
+  justify-content: space-around;
+  flex-wrap: wrap; 
+  gap: 40px; 
+}
+
+.numbers_item {
+  flex: 1 1 30%;
+  text-align: center;
+}
+
+.numbers_number {
+  font-size: 44px;
+  font-weight: 700;
+  color: darkblue;
+  margin-bottom: 10px;
+}
+
+.numbers_item p {
+  font-size: 16px;
+  font-weight: 500;
+  color: grey;
+  margin: 0;
+}
+
 /* Shearchiet Nakrebi grids */
 .grid-wrapper {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    width: 100%; 
-    height: auto; 
-    padding: 20px; 
-    box-sizing: border-box; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  width: 100%; 
+  height: auto; 
+  padding: 20px; 
+  box-sizing: border-box; 
 }
-
 
 .box-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: repeat(2, auto); 
-    gap: 20px; 
-    width: 1100px;
-    padding: 20px; 
-    box-sizing: border-box; 
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: repeat(2, auto); 
+  gap: 20px; 
+  width: 1100px;
+  padding: 20px; 
+  box-sizing: border-box; 
 }
-
 
 .box-small {
-    background-color: #ccc; 
-    border-radius: 5px; 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+  background-color: #ccc; 
+  border-radius: 5px; 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
-
 
 .box-small-1 {
-    grid-row: 1 / span 1; /* First row */
-    background-image: url('2.png');
+  grid-row: 1 / span 1; /* First row */
+  background-image: url('2.png');
 }
-
 
 .box-small-2 {
-    grid-row: 2 / span 1; /* Second row */
-    background-image: url('3.png');
+  grid-row: 2 / span 1; /* Second row */
+  background-image: url('3.png');
 }
-
 
 .box-large {
-    background-color: #eee; 
-    height: 376px; 
-    border-radius: 5px;
-    grid-row: span 2; /* Span both rows to the right side */
-    background-image: url('4.png');
+  background-color: #eee; 
+  height: 376px; 
+  border-radius: 5px;
+  grid-row: span 2; /* Span both rows to the right side */
+  background-image: url('4.png');
 }
 
-  @media (max-width: 767px) {
-    /* TBC Concept Box */
-    .box {
+@media (max-width: 767px) {
+  /* TBC Concept Box */
+  .box {
       padding: 20px;
       margin: 0;
       background-size: 250%; 
@@ -189,74 +182,74 @@ body {
       justify-content: center; 
       width: auto; 
       height: auto; 
-    }
-  
-    .text-container {
+  }
+
+  .text-container {
       margin-top: 80%; 
       width: 100%; 
-    }
-  
-    .header {
+  }
+
+  .header {
       font-size: 1rem; 
-    }
-  
-    .paragraph {
+  }
+
+  .paragraph {
       font-size: 1rem; 
-    }
-  
-    .button {
+  }
+
+  .button {
       width: 100%; 
       font-size: 1rem;
-    }
-  
-    /* statistics */
-    .section_statistics {
+  }
+
+  /* statistics */
+  .section_statistics {
       width: auto;
       padding-left: 45px;
       margin: 0;
       justify-content: start; 
       margin-top: 30px; 
-    }
-  
-    .numbers {
+  }
+
+  .numbers {
       width: auto;
       flex-direction: column; 
       align-items: flex-start; 
       gap: 20px; 
-    }
-  
-    .numbers_item {
+  }
+
+  .numbers_item {
       flex: 1 1 auto;
       margin: 0;
       align-items: flex-start; 
-    }
-    /* shearchiet Nakrebi Box Grid */
-    .box-grid {
-        display: flex; 
-        overflow-x: auto; /* Enable horizontal scroll */
-        gap: 20px; 
-        width: 100%;
-        padding: 20px; 
-        box-sizing: border-box; 
-        align-items: flex-start; 
-    }
+  }
 
-    .box-small, .box-large {
-        flex: 0 0 80%; 
-        max-width: 300px; 
-        height: 200px; 
-        background-size: cover; 
-        background-position: center; 
-    }
+  /* shearchiet Nakrebi Box Grid */
+  .box-grid {
+      display: flex; 
+      overflow-x: auto; /* Enable horizontal scroll */
+      gap: 20px; 
+      width: 100%;
+      padding: 20px; 
+      box-sizing: border-box; 
+      align-items: flex-start; 
+  }
 
-    .box-large {
-        flex: 0 0 80%; 
-        max-width: 300px; 
-        height: 200px; 
-    }
+  .box-small, .box-large {
+      flex: 0 0 80%; 
+      max-width: 300px; 
+      height: 200px; 
+      background-size: cover; 
+      background-position: center; 
+  }
 
-    .box-small-1, .box-small-2, .box-large {
-        border-radius: 5px; 
-    }
+  .box-large {
+      flex: 0 0 80%; 
+      max-width: 300px; 
+      height: 200px; 
+  }
+
+  .box-small-1, .box-small-2, .box-large {
+      border-radius: 5px; 
   }
 }
