@@ -1,117 +1,129 @@
+/* Scrollable container styling */
 .scrollable-container {
     width: 1100px;
-    overflow-x: auto; 
+    color: black;
+    overflow-x: auto;
     white-space: nowrap;
     padding: 10px;
-    border: 1px solid #ddd;
-    box-sizing: border-box; 
-    cursor: grab; 
-    scrollbar-width: thin; 
-    scrollbar-color: #007aff #e1e1e1; 
+    
+    box-sizing: border-box;
 }
 
-
+/* Change cursor to grabbing when active */
 .scrollable-container:active {
-    cursor: grabbing;
+    cursor: grab;
 }
 
-/* For WebKit browsers (Chrome, Safari) */
+
+/* WebKit scrollbar styling */
 .scrollable-container::-webkit-scrollbar {
-    height: 8px; 
+    border-bottom: 2px solid lightgray;
+    height: 2px; 
 }
 
 .scrollable-container::-webkit-scrollbar-track {
-    background: #e1e1e1; /
+    background: none; 
 }
 
 .scrollable-container::-webkit-scrollbar-thumb {
-    background: #007aff; 
-    border-radius: 4px; 
+    background: #182cc0; 
+    border-radius: 1px;
 }
-
-
+/* Scrollable content styling */
 .scrollable-content {
-    display: inline-flex; 
-    flex-wrap: nowrap; 
-    padding: auto;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
+/* Scrollable box styling */
 .scrollable-box {
     display: inline-block;
     width: 100%;
     min-width: 320px;
     margin-right: 20px;
     position: relative;
-    box-sizing: border-box; 
-    cursor: pointer; 
-    overflow: hidden; 
-    transition: box-shadow 0.3s ease; 
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
 }
 
-
+/* Large image styling */
 .scrollable-box img.large-image {
-    width: 100%; 
+    width: 100%;
     height: auto;
     border-radius: 10px;
-    transition: clip-path 0.3s ease; 
-    clip-path: inset(2% 0 0 0); 
+    transition: clip-path 0.3s ease;
+    clip-path: inset(2% 0 0 0);
 }
-
 
 .scrollable-box:hover img.large-image {
-    clip-path: inset(0 0 2% 0); 
+    clip-path: inset(0 0 2% 0);
 }
 
-
+/* Small image styling */
 .scrollable-box img.small-image {
     position: absolute;
     background-color: white;
     top: 10px;
     right: 10px;
-    width: 20%; 
+    width: 20%;
     height: auto;
-    max-width: 80px; 
+    max-width: 80px;
     border: 2px solid white;
     border-radius: 5px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
-
+/* Text content styling */
 .scrollable-box .text-content {
     margin-top: 10px;
     padding: 0 10px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .scrollable-box .text-content .title {
     font-weight: bold;
     margin-bottom: 5px;
-    font-size: 1.2em; 
+    font-size: 1.2em;
 }
 
 .scrollable-box .text-content .description {
     color: #666;
-    font-size: 1em; 
+    font-size: 1em;
 }
 
+/* Container-3 specific styles */
+.container-3 .scrollable-box img.large-image {
+    width: fit-content; /* Adjust based on your layout */
+    height: 52px;
+    
+}
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
+    .scrollable-container {
+        width: 100%;
+        padding: 5px;
+    }
+
     .scrollable-box {
-        width: 80%; 
-        max-width: 250px; 
-        margin-right: 10px; 
+        width: 80%;
+        max-width: 250px;
+        margin-right: 10px;
     }
 
     .scrollable-box img.small-image {
-        width: 15%; 
+        width: 15%;
     }
 
     .scrollable-box .text-content .title {
-        font-size: 1em; 
+        font-size: 1em;
     }
 
     .scrollable-box .text-content .description {
-        font-size: 0.9em; 
+        font-size: 0.9em;
     }
 }

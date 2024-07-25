@@ -17,8 +17,7 @@ body {
   position: relative;
   max-width: 100%; 
   height: 376px; 
-  padding: 95px; 
-  background-image: url('1.jpg'); 
+  background-image: url('Images/1.jpg'); 
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
@@ -32,9 +31,10 @@ body {
 .text-container {
   width: 446px;
   text-align: left;
-  background: rgba(0, 0, 0, 0.5); 
-  padding: 20px; 
+  padding: 70px; 
   border-radius: 5px; 
+  color: white;
+ 
 }
 
 .header {
@@ -71,18 +71,13 @@ body {
 
 /* Gamoiweret text */
 .gamoiweret {
- 
-  
   color: black;
   height: auto; 
   font-size: 36px;
   font-weight: 400;
   line-height: 1.7;
   text-align: left;
- 
   box-sizing: border-box; 
-  
-  
 }
 
 /* Statistics */
@@ -93,7 +88,6 @@ body {
   width: 1100px; 
   text-align: center;
   color: black;
-  
   box-sizing: border-box; 
 }
 
@@ -132,7 +126,6 @@ body {
 .choose-container {
   width: 100%;
   max-width: 1100px; 
-  
   text-align: left; 
   font-size: 15px; 
   color: black; 
@@ -155,7 +148,6 @@ body {
   grid-template-rows: repeat(2, auto); 
   gap: 20px; 
   width: 1100px;
-  
   box-sizing: border-box; 
 }
 
@@ -169,12 +161,12 @@ body {
 
 .box-small-1 {
   grid-row: 1 / span 1; /* First row */
-  background-image: url('2.png');
+  background-image: url('Images/2.png');
 }
 
 .box-small-2 {
   grid-row: 2 / span 1; /* Second row */
-  background-image: url('3.png');
+  background-image: url('Images/3.png');
 }
 
 .box-large {
@@ -182,7 +174,7 @@ body {
   height: 376px; 
   border-radius: 5px;
   grid-row: span 2; /* Span both rows to the right side */
-  background-image: url('4.png');
+  background-image: url('Images/4.png');
 }
 
 /* Shetavazebebi header text */
@@ -192,7 +184,6 @@ body {
   align-items: center; 
   width: 100%; 
   box-sizing: border-box; 
-  
 }
 
 .promo-text {
@@ -216,23 +207,75 @@ body {
 .promo-button:hover {
   color: #3240e5; 
 }
-
-/* shetavazebebi slider */
-
+/* cifruli bank */
+.cifr-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 20px; 
+  align-items: center; 
+  padding: 20px; 
+}
+.cifr-left {
+  display: flex;
+  flex-direction: column; 
+  gap: 10px; 
+  color: black;
+}
+.cifr-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0; 
+}
+.cifr-paragraph {
+  font-size: 16px;
+  margin: 0; 
+  line-height: 1.5; 
+}
+.cifr-buttons {
+  display: flex;
+  gap: 49px; 
+  margin-left: 33px;
+}
+.cifr-right {
+  background-image: url('images/c3.png'); 
+  background-size:contain; 
+  background-position: right; 
+  background-repeat: no-repeat;
+  border-radius: 8px; 
+  min-height: 200px; 
+  width: 100%; 
+}
+.cifr-button-1 {
+  background-image: url('images/c1.svg');
+}
+.cifr-button-2 {
+  background-image: url('images/c2.svg');
+}
+.cifr-button-1, .cifr-button-2 {
+  width: 68px;
+  height: 17px;
+  
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  border:#3240e5;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: inline-block; 
+  background-position: center; 
+}
+/* cifruli bank */
+.box-2 {
+  background-image: url('images/15.png');
+}
 @media (max-width: 767px) {
-  .body {
-    
-  }
-  /* TBC Concept Box */
   .box {
-
     flex-direction: column; 
     justify-content: center; 
-   
   }
 
   .text-container {
-   padding-top: 150px;
+    padding-top: 150px;
   }
 
   .header {
@@ -298,8 +341,4 @@ body {
   .box-small-1, .box-small-2, .box-large {
     border-radius: 5px; 
   }
-
-  /* shetavazebebi slider */
-  
-
 }

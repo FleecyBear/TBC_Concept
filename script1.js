@@ -1,30 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Data arrays for each scroll container
     const data1 = [
-        { image: 's1-1.png', smallImage: 's1-2.jpg', title: 'Box 1', text: 'Description 1', hasSmallImage: true },
-        { image: 's2-1.jpg', smallImage: 's2-2.png', title: 'Box 2', text: 'Description 2', hasSmallImage: true },
-        { image: 's3-1.png', smallImage: 's3-2.png', title: 'Box 3', text: 'Description 3', hasSmallImage: true },
-        { image: 's4-1.png', smallImage: 's3-2.png', title: 'Box 4', text: 'Description 4', hasSmallImage: true },
-        { image: 's5-1.png', smallImage: 's5-2.png', title: 'Box 5', text: 'Description 5', hasSmallImage: true },
-        { image: 's6-1.png', smallImage: 's6-2.png', title: 'Box 6', text: 'Description 6', hasSmallImage: true },
+        { image: 'Images/s1-1.png', smallImage: 'Images/s1-2.jpg', title: 'Box 1', text: 'Description 1', hasSmallImage: true },
+        { image: 'Images/s2-1.jpg', smallImage: 'Images/s2-2.png', title: 'Box 2', text: 'Description 2', hasSmallImage: true },
+        { image: 'Images/s3-1.png', smallImage: 'Images/s3-2.png', title: 'Box 3', text: 'Description 3', hasSmallImage: true },
+        { image: 'Images/s4-1.png', smallImage: 'Images/s3-2.png', title: 'Box 4', text: 'Description 4', hasSmallImage: true },
+        { image: 'Images/s5-1.png', smallImage: 'Images/s5-2.png', title: 'Box 5', text: 'Description 5', hasSmallImage: true },
+        { image: 'Images/s6-1.png', smallImage: 'Images/s6-2.png', title: 'Box 6', text: 'Description 6', hasSmallImage: true },
     ];
 
     const data2 = [
-        { image: '10.png', title: 'Box 7', text: 'Description 7', hasSmallImage: false },
-        { image: '11.png', title: 'Box 8', text: 'Description 8', hasSmallImage: false },
-        { image: '12.png', title: 'Box 9', text: 'Description 9', hasSmallImage: false },
+        { image: 'Images/10.png', title: 'Box 7', text: 'Description 7', hasSmallImage: false },
+        { image: 'Images/11.png', title: 'Box 8', text: 'Description 8', hasSmallImage: false },
+        { image: 'Images/12.png', title: 'Box 9', text: 'Description 9', hasSmallImage: false },
+    ];
+
+    const data3 = [
+        { image: 'Images/sq1.png', title: 'Box 10', text: 'Description 10', hasSmallImage: false },
+        { image: 'Images/sq2.png', title: 'Box 11', text: 'Description 11', hasSmallImage: false },
+        { image: 'Images/sq3.png', title: 'Box 12', text: 'Description 12', hasSmallImage: false },
+        { image: 'Images/sq4.png', title: 'Box 13', text: 'Description 13', hasSmallImage: false },
     ];
 
     const createScrollBoxes = (containerId, data) => {
         const scrollContent = document.getElementById(containerId);
         scrollContent.innerHTML = '';
 
-        data.forEach(item => {
+        data.forEach((item, index) => {
             const box = document.createElement('div');
             box.className = 'scrollable-box';
-
-            box.addEventListener('click', () => {
-                window.location.href = 'your-link-here.html';
-            });
 
             const largeImage = document.createElement('img');
             largeImage.src = item.image;
@@ -60,9 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    // Initialize scroll boxes for each container
     createScrollBoxes('scroll-content-1', data1);
     createScrollBoxes('scroll-content-2', data2);
+    createScrollBoxes('scroll-content-3', data3);
 
+    // Function to enable drag-to-scroll functionality
     const initDragScroll = (containerSelector) => {
         const scrollContainer = document.querySelector(containerSelector);
         let isDragging = false;
@@ -77,13 +84,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         scrollContainer.addEventListener('mouseleave', () => {
-            isDragging = false;
-            scrollContainer.style.cursor = 'grab';
+            if (isDragging) {
+                isDragging = false;
+                scrollContainer.style.cursor = 'grab';
+            }
         });
 
         scrollContainer.addEventListener('mouseup', () => {
-            isDragging = false;
-            scrollContainer.style.cursor = 'grab';
+            if (isDragging) {
+                isDragging = false;
+                scrollContainer.style.cursor = 'grab';
+            }
         });
 
         scrollContainer.addEventListener('mousemove', (e) => {
@@ -95,6 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    // Initialize drag-to-scroll for each scroll container
     initDragScroll('#scroll-container-1');
     initDragScroll('#scroll-container-2');
+    initDragScroll('#scroll-container-3');
 });
