@@ -1,0 +1,166 @@
+/* end css */
+.grid-container-end {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.column-end {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-button-end {
+    background: transparent;
+    border: none; 
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+    text-align: left;
+}
+
+.menu-content-end {
+    display: flex;
+    flex-direction: column; 
+}
+
+.column-end:nth-child(4) .text-line-end {
+    margin-bottom: 10px;
+}
+
+
+.button-with-image-end {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px; 
+}
+
+
+.button-with-image-end.phone::before {
+    content: url('Images/phone.svg'); 
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.button-with-image-end.email::before {
+    content: url('Images/email.svg'); 
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.button-with-image-end.branches::before {
+    content: url('Images/branches.svg'); 
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.additional-text-end {
+    margin-bottom: 10px;
+}
+
+.square-buttons-end {
+    display: flex;
+    gap: 10px;
+}
+
+.square-button-end {
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    border: none; 
+    cursor: pointer;
+}
+
+.square-button-end:nth-child(1) {
+    background: url('Images/facebook.svg'); 
+    background-repeat: no-repeat;
+}
+
+.square-button-end:nth-child(2) {
+    background: url('Images/instagram.svg'); 
+    background-repeat: no-repeat;
+}
+
+.arrow-end {
+    cursor: pointer; 
+    font-size: 18px;
+    transition: transform 0.3s ease-in-out;
+    pointer-events: all; 
+    user-select: none; 
+    content: url('Images/arrow.svg');
+}
+.arrow-end::before {
+    content: "";
+    display: block;
+    pointer-events: none; 
+}
+.endname {
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .grid-container-end {
+        display: block;
+    }
+
+    .column-end {
+        display: block; 
+        margin-bottom: 10px;
+    }
+
+    .column-end:not(:last-child) {
+        border-bottom: 1px solid #ccc; 
+    }
+
+    .menu-header-end {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .grid-button-end {
+        background: #f0f0f0;
+        padding: 10px;
+        cursor: pointer;
+        text-align: left;
+        display: block; 
+    }
+
+    .arrow-end {
+        cursor: pointer;
+        font-size: 18px;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .menu-content-end {
+        display: none; 
+        padding: 10px;
+        border-top: 1px solid #ccc; 
+        flex-direction: column; 
+    }
+
+    .menu-content-end.show {
+        display: block; 
+    }
+}
+@media (min-width: 769px) {
+    .arrow-end {
+        display: none; /* Hide the arrow in non-mobile views */
+    }
+}
