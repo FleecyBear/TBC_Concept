@@ -268,6 +268,60 @@ body {
 .box-2 {
   background-image: url('images/15.png');
 }
+
+/* end image Concept + qar/en */
+.line-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid black;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.line-image {
+  cursor: pointer;
+  background: url('Images/concept.svg') no-repeat center center;
+  background-size: contain;
+  width: 165px;
+  height: 32px;
+}
+
+.line-text-container {
+  display: flex;
+  align-items: center;
+}
+
+.line-image-small {
+  background: url('Images/globe.svg') no-repeat center center;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px; 
+}
+.line-text {
+  cursor: pointer;
+  position: relative;
+}
+
+.hover-text {
+  display: none;
+  position: absolute;
+  top: 100%; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f0f0f0; 
+  padding: 5px;
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  white-space: nowrap; 
+}
+
+.line-text:hover .hover-text {
+  display: block;
+}
 @media (max-width: 767px) {
   .box {
     flex-direction: column; 
@@ -340,5 +394,12 @@ body {
 
   .box-small-1, .box-small-2, .box-large {
     border-radius: 5px; 
+  }
+  .line-image {
+    cursor: pointer;
+    background: url('Images/concept-small.svg') no-repeat center center;
+    background-size: contain;
+    width: 165px;
+    height: 32px;
   }
 }
