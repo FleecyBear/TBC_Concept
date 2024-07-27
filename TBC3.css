@@ -55,7 +55,7 @@
 
 
 .button-with-image-end.phone::before {
-    content: url('Images/phone.svg'); 
+    content: url('./Images/phone.svg'); 
     position: absolute;
     left: 10px;
     top: 50%;
@@ -65,7 +65,7 @@
 }
 
 .button-with-image-end.email::before {
-    content: url('Images/email.svg'); 
+    content: url('./Images/email.svg'); 
     position: absolute;
     left: 10px;
     top: 50%;
@@ -75,7 +75,7 @@
 }
 
 .button-with-image-end.branches::before {
-    content: url('Images/branches.svg'); 
+    content: url('./Images/branches.svg'); 
     position: absolute;
     left: 10px;
     top: 50%;
@@ -107,12 +107,12 @@
 }
 
 .square-button-end:nth-child(1) {
-    background: url('Images/facebook.svg'); 
+    background: url('./Images/facebook.svg'); 
     background-repeat: no-repeat;
 }
 
 .square-button-end:nth-child(2) {
-    background: url('Images/instagram.svg'); 
+    background: url('./Images/instagram.svg'); 
     background-repeat: no-repeat;
 }
 
@@ -122,7 +122,7 @@
     transition: transform 0.3s ease-in-out;
     pointer-events: all; 
     user-select: none; 
-    content: url('Images/arrow.svg');
+    content: url('./Images/arrow.svg');
 }
 .arrow-end::before {
     content: "";
