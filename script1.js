@@ -1,25 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Data arrays for each scroll container
     const data1 = [
-        { image: 'Images/s1-1.png', smallImage: 'Images/s1-2.jpg', title: 'Box 1', text: 'Description 1', hasSmallImage: true },
-        { image: 'Images/s2-1.jpg', smallImage: 'Images/s2-2.png', title: 'Box 2', text: 'Description 2', hasSmallImage: true },
-        { image: 'Images/s3-1.png', smallImage: 'Images/s3-2.png', title: 'Box 3', text: 'Description 3', hasSmallImage: true },
-        { image: 'Images/s4-1.png', smallImage: 'Images/s3-2.png', title: 'Box 4', text: 'Description 4', hasSmallImage: true },
-        { image: 'Images/s5-1.png', smallImage: 'Images/s5-2.png', title: 'Box 5', text: 'Description 5', hasSmallImage: true },
-        { image: 'Images/s6-1.png', smallImage: 'Images/s6-2.png', title: 'Box 6', text: 'Description 6', hasSmallImage: true },
+        { image: 'Images/s1-1.png', smallImage: 'Images/s1-2.jpg', title: 'ჯაზ ფესტივალის შეთავაზებები', text: 'IVERIA BEACH - დაიბრუნეთ 30%', hasSmallImage: true },
+        { image: 'Images/s2-1.jpg', smallImage: 'Images/s2-2.png', title: 'ავტოა თეგეტა მოტორსი', text: 'თეგეტა მოტორსი - 50% ფასდაკლება', hasSmallImage: true },
+        { image: 'Images/s3-1.png', smallImage: 'Images/s3-2.png', title: 'ავტო', text: 'თეგეტა მოტორსი - ბათუმი', hasSmallImage: true },
+        { image: 'Images/s4-1.png', smallImage: 'Images/s3-2.png', title: 'Box 4', text: 'Le Meridien Batumi - 10%-იანი ფასდაკლება', hasSmallImage: true },
+        { image: 'Images/s5-1.png', smallImage: 'Images/s5-2.png', title: 'Box 5', text: 'Colosseum Marina Hotel - 15%-იანი ფასდაკლება', hasSmallImage: true },
     ];
 
     const data2 = [
-        { image: 'Images/10.png', title: 'Box 7', text: 'Description 7', hasSmallImage: false },
-        { image: 'Images/11.png', title: 'Box 8', text: 'Description 8', hasSmallImage: false },
-        { image: 'Images/12.png', title: 'Box 9', text: 'Description 9', hasSmallImage: false },
+        { image: 'Images/10.png', title: 'ციფრული', text: 'თიბისი კონცეპტის ციფრული ნაკრები განკუთვნილია მათთვის, ვისთვისაც საბანკო მომსახურებით სარგებლობა ყოველდღიურობის ნაწილია, ვინც აქტიურად მოიხმარს არასაბანკო პროდუქტებსა და შეთავაზებებს და ვისაც ურჩევნია დამოუკიდებლად, პირადი ბანკირის გარეშე მართოს საკუთარი ფინანსები და საბანკო ოპერაციები.', hasSmallImage: false },
+        { image: 'Images/11.png', title: 'პრემიუმი', text: 'თიბისი კონცეპტის მომხმარებლებთან ურთიერთობის ერთ-ერთი ფორმატი - პრემიუმ ნაკრები, სხვა საბანკო და არასაბანკო უპირატესობებთან ერთად, პირადი ბანკირის მომსახურებას გულისხმობს. პირადი ბანკირის მთავარი ამოცანა მომხარებლისთვის ცხოვრების გამარტივება და მისთვის უმაღლესი ხარისხის მომსახურების უზრუნველყოფაა.', hasSmallImage: false },
+        { image: 'Images/12.png', title: '360', text: 'თიბისი კონცეპტის 360 ნაკრები განკუთვნილია მათთვის, ვისაც სხვა საბანკო და არასაბანკო უპიტარესობებთან ერთად, კიდევ უფრო მეტი ფინანსური ინსტრუმენტი და გაზრდილი შესაძლებლობები ესაჭიროება', hasSmallImage: false },
     ];
 
     const data3 = [
-        { image: 'Images/sq1.png', title: 'Box 10', text: 'Description 10', hasSmallImage: false },
-        { image: 'Images/sq2.png', title: 'Box 11', text: 'Description 11', hasSmallImage: false },
-        { image: 'Images/sq3.png', title: 'Box 12', text: 'Description 12', hasSmallImage: false },
-        { image: 'Images/sq4.png', title: 'Box 13', text: 'Description 13', hasSmallImage: false },
+        { image: 'Images/sq1.png', title: 'საუკეთესო პერსონალური მომსახურება საქართველოში 2024', text: 'The Global Finance', hasSmallImage: false },
+        { image: 'Images/sq2.png', title: 'საუკეთესო პერსონალური მომსახურება საქართველოში 2023', text: 'Euromoney', hasSmallImage: false },
+        { image: 'Images/sq3.png', title: 'საუკეთესო პერსონალური მომსახურება საქართველოში 2022', text: 'The Global Finance', hasSmallImage: false },
+        { image: 'Images/sq4.png', title: 'საუკეთესო პერსონალური მომსახურება საქართველოში 2021', text: 'The Banker & PWM', hasSmallImage: false },
     ];
 
     const createScrollBoxes = (containerId, data) => {
