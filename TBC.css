@@ -18,6 +18,23 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+/* right slider */
+::-webkit-scrollbar {
+  width: 8px;
+  transition: opacity 0.5s ease-out;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(222, 222, 222, .75);
+  user-select: none
+  
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, .5);
+    border-radius: 4px;
+}
+
 /* TBC Concept box */
 .box {
   padding-top: 60px;
@@ -89,7 +106,7 @@ body {
 
 /* Gamoiweret text */
 .gamoiweret {
-  color: black;
+  color: #141719;
   height: auto; 
   text-align: left;
   box-sizing: border-box; 
@@ -344,7 +361,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid black;
+  
   padding: 10px;
   position: relative;
   width: 100%;
@@ -439,7 +456,9 @@ body {
   margin-top: 0;
   border: none;
   background-color: white;
-  width:1100px;
+  max-width: 1100px;
+  width: 100%;
+  box-sizing: border-box; 
 }
 
 .left-side-container {
@@ -472,9 +491,6 @@ body {
   width: 190px;
   opacity: 1;
 }
-.start-products, .start-offers, .start-concept {
-
-}
 .expanded-products, .expanded-offers, .expanded-concept, .expanded-images {
   display: none;
   flex-direction: column;
@@ -500,11 +516,12 @@ body {
 .expanded-button:hover {
   color: #007aff;
 }
-/* Show the expanded sections when they have the .visible class */
+
 .visible {
-  display: flex; /* or `block` if you are not using flex layout */
+  display: flex; 
 }
 
+/* mtavari single line text */
 .mtavari {
   line-height: 1.7;
   font-size: 12px;
@@ -547,33 +564,39 @@ body {
   cursor: pointer;
 }
 @media (max-width: 767px) {
+
+  
+ /* box with button */
   .box {
-    flex-direction: column; 
-    justify-content: center; 
+    height: auto; /* Adjust height for smaller screens */
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .text-container {
-    padding-top: 150px;
+    width: 90%;
+    padding: 30px;
   }
 
-  .header {
-    font-size: 1rem; 
-  }
 
   .paragraph {
-    font-size: 1rem; 
+
+    margin: 0 0 16px 0;
   }
 
   .button {
+    font-size: 14px;
     width: 100%; 
-    font-size: 1rem;
+    height: 50px;
+    padding: 12px;
   }
+}
 
   /* statistics */
   .section_statistics {
     padding-top: 60px;
     width: auto;
-    padding-left: 45px;
+    padding-left: 60px;
     margin: 0;
     justify-content: start; 
     margin-top: 30px; 
@@ -583,12 +606,13 @@ body {
     width: auto;
     flex-direction: column; 
     align-items: flex-start; 
-    gap: 20px; 
+    gap: 100px; 
   }
 
   .numbers_item {
     flex: 1 1 auto;
     margin: 0;
+    margin-left: 45px;
     align-items: flex-start; 
   }
 
@@ -626,4 +650,43 @@ body {
     background-size: contain;
   
   }
-}
+
+  /* gamoiweret text */
+  .gamoiweret {
+    font-size: 28px; /* Adjust font size for tablets */
+    padding-top: 40px; /* Adjust padding */
+  }
+  
+  @media (max-width: 480px) {
+    /* box with image */
+    .box {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  
+    .text-container {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .header {
+      font-size: 20px;
+    }
+  
+    .paragraph {
+      font-size: 12px;
+      margin: 0 0 12px 0;
+    }
+  
+    .button {
+      font-size: 16px;
+      width: 100%;
+      padding: 10px;
+    }
+/* gamoiweret text */
+    .gamoiweret {
+      font-size: 20px; /* Adjust font size for mobile */
+      padding-top: 20px; /* Adjust padding */
+    }
+    
+  }
