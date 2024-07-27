@@ -1,6 +1,6 @@
 /* Base styles */
 body {
-  height: 10000px;
+  height: 100%;
   margin: 0;
   font-family: sans-serif;
   color: black;
@@ -355,6 +355,7 @@ body {
   cursor: pointer;
   background: url('./Images/concept.svg') no-repeat center center;
   background-size: contain;
+  opacity: 0.7; 
   width: 165px;
   height: 32px;
 }
@@ -372,8 +373,10 @@ body {
   height: 20px;
   margin-right: 5px; 
   cursor: pointer;
+  opacity: 0.5; 
 }
 .line-text {
+  
   cursor: pointer;
   position: relative;
   -webkit-text-size-adjust: 100%;
@@ -394,11 +397,11 @@ body {
   display: none;
   position: absolute;
   top: 100%; 
-  left: 50%;
+  left: 0;
   transform: translateX(-50%);
   background-color: #f0f0f0; 
   padding: 5px;
-  border: 1px solid #ccc; 
+  border: 1px solid #e1e4e5; 
   border-radius: 4px; 
   white-space: nowrap; 
 }
@@ -411,7 +414,7 @@ body {
 .line-text-container-2 {
   display: flex;
   gap: 10px;
-  align-items: flex-start;
+  align-items: center;
 }
 .line-image-small-2, .line-image-small-3 {
   cursor:pointer;
@@ -420,15 +423,23 @@ body {
   background: url('./Images/search.svg');
 }
 .line-text-container-3 {
+  user-select: none;
   margin-right:auto;
   gap: 40px; 
   margin-left: 100px;
   align-items: start;
 }
 .line-container-1 {
+  top: 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  position: fixed;
+  z-index: 2;
   align-items: start;
-  margin-top: 20px;
+  margin-top: 0;
   border: none;
+  background-color: white;
+  width:1100px;
 }
 
 .left-side-container {
@@ -443,7 +454,7 @@ body {
   line-height: 1.4;
   box-sizing: border-box;
   z-index: 2;
-  margin-top: 2px;
+  margin-top: 0px;
   transition: color 0.25s ease-in-out;
   position: relative;
   cursor: pointer;
@@ -459,6 +470,7 @@ body {
   background-repeat: no-repeat;
   height: 135px;
   width: 190px;
+  opacity: 1;
 }
 .start-products, .start-offers, .start-concept {
 
@@ -470,26 +482,69 @@ body {
   margin-top: 50px;
   width: 100px;
 }
-
+.expanded-button {
+  margin-left: 10px;
+  color: #182cc0;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  box-sizing: border-box;
+  z-index: 2;
+  margin-top: 2px;
+  transition: color .6s ease-out;
+  position: relative;
+  cursor: pointer;
+  width: max-content;
+}
+.expanded-button:hover {
+  color: #007aff;
+}
 /* Show the expanded sections when they have the .visible class */
 .visible {
   display: flex; /* or `block` if you are not using flex layout */
 }
 
 .mtavari {
-  -webkit-text-size-adjust: 100%;
-  --swiper-theme-color: #007aff;
-  --swiper-navigation-size: 44px;
-  font-family: TBCX,sans-serif;
   line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
   font-size: 12px;
   box-sizing: border-box;
   color: #141719;
   font-weight: 500;
-  padding-top: 24px;
+  padding-top: 104px;
   padding-bottom: 24px;
+}
+
+/* uflebebi dabla */
+.rights-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.rights-left, .rights-right {
+  display: flex;
+  gap: 10px; 
+  
+}
+
+.rights-image {
+  content: url(./Images/concept-small.svg);
+  opacity: 0.7; 
+  height: 20px;
+}
+.rights-element, .rights-image {
+  padding: 10px 20px;
+  font-size: 12px;
+  display: flex; /* Center text inside */
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  text-align: center; /* Center text inside element */
+}
+.rights-element {
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   .box {

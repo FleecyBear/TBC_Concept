@@ -45,14 +45,19 @@
 }
 
 
+
 .button-with-image-end {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-top: 32px;
     position: relative;
     padding-left: 30px; 
-}
+    cursor: pointer;
 
+}
+.button-with-image-end:hover {
+ text-decoration: underline;
+}
 
 .button-with-image-end.phone::before {
     content: url('./Images/phone.svg'); 
@@ -85,27 +90,25 @@
 }
 
 .additional-text-end {
+    margin-top: 32px;
     margin-bottom: 10px;
     line-height: 1.7;
     font-size: 16px;
-    margin-top: 0;
     color: #141719;
     font-weight: 700;
 }
 
-.square-buttons-end {
-    display: flex;
-    gap: 10px;
-}
 
 .square-button-end {
-    width: 100px;
-    height: 100px;
+    width: 40px;
+    height: 40px;
     background-color: #f0f0f0;
     border: none; 
     cursor: pointer;
 }
-
+.for-gap {
+    margin-left: 10px;
+}
 .square-button-end:nth-child(1) {
     background: url('./Images/facebook.svg'); 
     background-repeat: no-repeat;
@@ -135,6 +138,10 @@
 }
 .endname:hover {
     color: inherit;
+}
+
+.contact {
+    padding-top: 12px;
 }
 @media (max-width: 768px) {
     .grid-container-end {
