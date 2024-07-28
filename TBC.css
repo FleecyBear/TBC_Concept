@@ -630,7 +630,7 @@ height: 100px;
   user-select: none;
   bottom: 16px; 
   right: 16px; 
-  z-index: 1000; 
+  z-index: 2; 
 }
 
 .dots-button {
