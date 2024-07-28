@@ -23,6 +23,7 @@
     color: inherit; 
     font-size: inherit; 
     transition: color 0.25s ease-in-out;
+    bottom:0;
 }
 
 .grid-button-end:hover {
